@@ -510,7 +510,22 @@ if __name__ == "__main__":
                     console.print("[bold yellow][!] Please use valid values.[/bold yellow]")
                     sleep(2)
                     continue
-            
+                    
+            elif service == 22: # Clone Account
+                console.print("[bold cyan]Please Enter Account Detalis[/bold cyan]:")
+                to_email = prompt_valid_value("[bold][?] Account Email[/bold]", "Email", password=False)
+                to_password = prompt_valid_value("[bold][?] Account Password[/bold]", "Password", password=False)
+                console.print("[bold cyan][%] Cloning your account[/bold cyan]: ", end=None)
+                if cpm.account_clone(to_email, to_password):
+                    console.print("[bold green]SUCCESSFUL.[/bold green]")
+                    console.print("==================================")
+                    answ = Prompt.ask("[bold cyan][?] Do You want to Exit ?[/bold cyan]", choices=["y", "n"], default="n")
+                    if answ == "y": console.print(f"[bold yellow][!] Thank You for using our tool, please join our telegram channel[/bold yellow]: [bold blue]@{__CHANNEL_USERNAME__}[/bold blue].")
+                    else: continue
+                else:
+                    console.print("[bold red]FAILED.[/bold red]")
+                    console.print("[bold yellow][!] Please try again.[/bold yellow]")
+                    sleep(2)
                     continue
             else: continue
             break
