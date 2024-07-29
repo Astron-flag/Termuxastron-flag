@@ -161,7 +161,7 @@ if __name__ == "__main__":
             console.print("[bold cyan](19): Unlock Smoke[/bold cyan]")
             console.print("[bold cyan](20): Change Race Wins[/bold cyan]")
             console.print("[bold cyan](21): Change Race Loses[/bold cyan]")
-            
+            console.print("[bold cyan](22): клонировать аккаунт [/bold cyan]")
             console.print("[bold cyan](0) : Exit[/bold cyan]", end="\n\n")
            
             
