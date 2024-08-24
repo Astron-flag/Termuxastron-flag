@@ -107,7 +107,7 @@ if __name__ == "__main__":
         acc_password = prompt_valid_value("[bold][?] Account Password[/bold]", "Password", password=False)
         
         console.print("[bold cyan][%] Trying to Login[/bold cyan]: ", end=None)
-        cpm = CPMNuker(acc_access_key)
+        cpm = CPMEwan(acc_access_key)
         login_response = cpm.login(acc_email, acc_password)
         if login_response != 0:
             if login_response == 100:
@@ -133,7 +133,7 @@ if __name__ == "__main__":
         while True:
             banner(console)
             load_player_data(cpm)
-            load_key_data(cpm)
+            
             choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22"]
             console.print("[bold cyan](01): Increase Money[/bold cyan]")
             console.print("[bold cyan](02): Increase Coins[/bold cyan]")
@@ -318,7 +318,7 @@ if __name__ == "__main__":
                 if status == 0:
                     console.print("[bold green]SUCCESSFUL.[/bold green]")
                     console.print("==================================")
-                    console.print(f"[bold red]! INFO[/bold red]: In order to tweak this account with CPMNuker")
+                    console.print(f"[bold red]! INFO[/bold red]: ")
                     console.print("you most sign-in to the game using this account.")
                     sleep(2)
                     continue
